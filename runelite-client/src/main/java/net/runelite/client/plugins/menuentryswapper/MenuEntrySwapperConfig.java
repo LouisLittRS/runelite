@@ -241,4 +241,30 @@ public interface MenuEntrySwapperConfig extends Config
 	{
 		return true;
 	}
+
+	//Written By Ya Boy
+
+	@ConfigItem(
+			position = 20,
+			keyName = "swapRemoveThing",
+			name = "Swap Remove",
+			description = "Swap Wear/Remove with Useful things for RC"
+	)
+	default boolean swapRemoveThing() { return true; }
+
+	@ConfigItem(
+			position = 21,
+			keyName = "swapFillingPouches",
+			name = "Pouches Fill Bank",
+			description = "Swap the fill option to the first thingy in the bank lol ez pz"
+	)
+	default boolean swapFillingPouches() { return true; }
+
+	@ConfigItem(
+			position = 22,
+			keyName = "swapAllToOneInBank",
+			name = "Switch All To One in The Bank",
+			description = "Swap the all option to one in the bank (this will only work for ring of duelling and binding necklace"
+	)
+	default boolean swapAllToOneBank() { return true; }
 }
