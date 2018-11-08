@@ -405,6 +405,35 @@ public class MenuEntrySwapperPlugin extends Plugin
 				swap("quick-travel", option, target, true);
 			}
 		}
+		//Written by ya boy from here ############################################################################################################################################################
+		if (config.swapRemoveThing() && option.equals("remove"))
+		{
+			if (target.contains("max cape")) {
+				swap("crafting guild", option, target, true);
+			}
+			if (target.contains("ring of dueling")) {
+				swap("duel arena", option, target, true);
+			}
+			if (target.contains("amulet of glory")){
+				swap("edgeville", option, target, true);
+			}
+		}
+		if (config.swapFillingPouches() && target.contains("pouch"))
+		{
+			if (option.equals("deposit-all")) {
+				swap("fill", option, target, true);
+			}
+			if (option.equals("fill")){
+				swap("empty", option, target, true);
+			}
+		}
+		if (config.swapAllToOneBank() && option.equals("withdraw-all"))
+		{
+			if (target.contains("binding necklace") || target.contains("ring of dueling") || target.contains("stamina potion") || target.contains("amulet of glory")){
+				swap("withdraw-1", option, target, true);
+			}
+		}
+		//To here ################################################################################################################################################################################
 		else if (config.swapTravel() && option.equals("pass") && target.equals("energy barrier"))
 		{
 			swap("pay-toll(2-ecto)", option, target, true);
